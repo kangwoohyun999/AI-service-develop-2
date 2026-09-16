@@ -1,0 +1,136 @@
+/* 전체 배경 및 기본 폰트 설정 */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  background: #f0f2f5;
+  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+}
+
+/* 앱 카드 영역 */
+.app {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.app h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* 입력창 + 버튼 영역 */
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* 우선순위 선택 드롭다운 */
+#priority-select {
+  padding: 10px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+#add-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4f6df5;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background: #3d59d6;
+}
+
+/* 남은 개수 텍스트 */
+.count {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* 할 일 목록 */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 할 일 개별 항목 */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.todo-item .todo-text {
+  flex: 1;
+  font-size: 15px;
+  word-break: break-all;
+}
+
+/* 완료된 항목 스타일 (취소선 처리) */
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+/* 우선순위 배지 공통 스타일 */
+.priority-badge {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 10px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* 우선순위별 색상 구분 */
+.priority-High {
+  background: #e74c3c; /* 빨강 - 높음 */
+}
+
+.priority-Medium {
+  background: #f39c12; /* 주황 - 보통 */
+}
+
+.priority-Low {
+  background: #2ecc71; /* 초록 - 낮음 */
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  border: none;
+  background: transparent;
+  color: #e74c3c;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #c0392b;
+}
